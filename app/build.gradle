@@ -10,7 +10,7 @@ android {
 
     sourceSets.main {
         jni.srcDirs = []
-        jniLibs.srcDir "$VUFORIA_SDK_DIR/$NATIVE_LIB_DIR/"
+        jniLibs.srcDir "src/libs/lib"
     }
 
     defaultConfig {
@@ -27,14 +27,14 @@ android {
         release {
             minifyEnabled false
             ndk {
-                abiFilters "armeabi-v7a","x86"
+                abiFilters "armeabi-v7a"
             }
         }
         debug {
             minifyEnabled false
             debuggable true
             ndk {
-                abiFilters "armeabi-v7a","x86"
+                abiFilters "armeabi-v7a"
             }
         }
     }
